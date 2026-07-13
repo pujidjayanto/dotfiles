@@ -72,12 +72,27 @@ Leader key: `Space`
 ### Requirements
 
 - Neovim >= 0.11
+- tmux
 - Git
 - A [Nerd Font](https://www.nerdfonts.com/) for file icons
 - `make` (for telescope-fzf-native compilation)
 - Node.js (for vtsls)
 - Go (for gopls)
 - Ruby (for ruby_lsp)
+
+### Tmux Cheatsheet
+
+Prefix key: `Ctrl+b`
+
+- `tmux new -s <name>` — Create a new session
+- `tmux new -s <name> -d` — Create a new session detached
+- `tmux ls` — List all sessions
+- `tmux kill-session -t <name>` — Kill a session
+- `Prefix + c` — Create a new window (tab) in current session
+- `Prefix + ,` — Rename current window (tab)
+- `Prefix + n` / `Prefix + p` — Next / previous window
+- `Prefix + d` — Detach from current session
+- `tmux attach -t <name>` — Reattach to a session
 
 ### Installation
 
