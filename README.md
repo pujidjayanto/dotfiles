@@ -84,15 +84,24 @@ Leader key: `Space`
 
 Prefix key: `Ctrl+b`
 
+**Sessions**
+
 - `tmux new -s <name>` — Create a new session
 - `tmux new -s <name> -d` — Create a new session detached
 - `tmux ls` — List all sessions
+- `tmux attach -t <name>` — Reattach to a session
 - `tmux kill-session -t <name>` — Kill a session
+- `tmux kill-server` — Kill all sessions and the tmux server
+- `Prefix + d` — Detach from current session (keeps it running)
+- `Prefix + s` — Session picker (arrow keys to select)
+- `Prefix + (` / `Prefix + )` — Switch to previous / next session
+- `Prefix + :new-session -s <name>` — Create new session without leaving current
+
+**Windows (tabs)**
+
 - `Prefix + c` — Create a new window (tab) in current session
 - `Prefix + ,` — Rename current window (tab)
 - `Prefix + n` / `Prefix + p` — Next / previous window
-- `Prefix + d` — Detach from current session
-- `tmux attach -t <name>` — Reattach to a session
 
 ### Installation
 
