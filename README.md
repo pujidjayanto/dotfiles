@@ -25,6 +25,7 @@ nvim/
 │       ├── telescope.lua
 │       ├── tabs.lua
 │       ├── lsp.lua
+│       ├── treesitter.lua
 │       └── git.lua
 ```
 
@@ -44,10 +45,12 @@ nvim/
 - **[tokyonight.nvim](https://github.com/folke/tokyonight.nvim)** — Colorscheme. Uses the "storm" variant with transparent backgrounds so it blends with my terminal (Kitty).
 - **[lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)** — Status line. Minimal config, theme-aware, shows mode/file/git info at a glance.
 - **[nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)** — File explorer. Opens on the left with `Ctrl+b` (same muscle memory as VS Code). Auto-opens when launching Neovim without a file argument.
-- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)** — Fuzzy finder for files (`<leader>ff`) and text search (`<leader>fg`). Ignores `node_modules`, `.git`, `build`, and `dist` by default. Uses fzf-native for sorting speed.
+- **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)** — Fuzzy finder for files (`<leader>ff`), text search (`<leader>fg`), and symbol search (`<leader>fs`). Ignores `node_modules`, `.git`, `build`, and `dist` by default. Uses fzf-native for sorting speed.
+- **[nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)** — Parser-based syntax highlighting and indentation. Much more accurate than regex-based highlighting for Ruby, Go, TypeScript, and others.
 - **[barbar.nvim](https://github.com/romgrk/barbar.nvim)** — Tabline/bufferline. Gives VS Code-style tabs with `Tab`/`Shift+Tab` navigation and `<leader>w` to close.
-- **[mason.nvim](https://github.com/williamboman/mason.nvim)** — Portable LSP server installer. Manages `gopls`, `ruby_lsp`, and `vtsls` so language tooling works out of the box without system-wide installs.
-- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** — Provides default configurations for language servers. Used with Neovim 0.11's native `vim.lsp.enable()` API.
+- **[mason.nvim](https://github.com/williamboman/mason.nvim)** — Portable LSP server installer. Manages `gopls` and `vtsls` so language tooling works out of the box without system-wide installs.
+- **[nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)** — Provides default configurations for language servers. Used with Neovim 0.11+'s native `vim.lsp.enable()` API.
+- **[ruby-lsp](https://github.com/Shopify/ruby-lsp)** — Ruby language server. Requires a successful `bundle install` locally. Provides go-to-definition, hover, and symbol search for Ruby projects.
 - **[vim-fugitive](https://github.com/tpope/vim-fugitive)** — Git commands inside Neovim. `<leader>gs` for status, `<leader>gp` for push.
 - **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)** — Shows git diff markers in the sign column and inline blame on the current line.
 
@@ -58,6 +61,7 @@ Leader key: `Space`
 - `<C-b>` — Toggle file explorer
 - `<leader>ff` — Find files
 - `<leader>fg` — Live grep (search text)
+- `<leader>fs` — Search symbols in current file
 - `<Tab>` / `<S-Tab>` — Next / previous buffer tab
 - `<leader>w` — Close current buffer
 - `gd` — Go to definition
