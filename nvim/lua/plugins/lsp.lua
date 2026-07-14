@@ -1,6 +1,8 @@
 return {
   {
     "williamboman/mason.nvim",
+    lazy = false,
+    priority = 900,
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
@@ -9,18 +11,16 @@ return {
       -- 1. Initialize Mason
       require("mason").setup()
 
-      -- 2. Ensure your favorite language servers are downloaded
-      local servers = { "gopls", "ruby_lsp", "vtsls" }
+      -- 2. Servers managed by Mason (auto-download)
+      local mason_servers = { "gopls", "vtsls" }
       require("mason-lspconfig").setup({
-        ensure_installed = servers,
+        ensure_installed = mason_servers,
       })
 
-      -- 3. Modern Neovim 0.11+ Method to register and activate LSPs
-      for _, server_name in ipairs(servers) do
-        local cfg = vim.lsp.config[server_name]
-        vim.lsp.config(server_name, cfg)
-        vim.lsp.enable(server_name)
-      end
+      -- 3. Enable LSPs
+      vim.lsp.enable("gopls")
+      vim.lsp.enable("vtsls")
+      vim.lsp.enable("ruby_lsp")
 
       -- Keymaps
       vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "Go to Definition" })
