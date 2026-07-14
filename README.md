@@ -73,6 +73,17 @@ Leader key: `Space`
 - `<C-h/j/k/l>` — Navigate between splits
 - `<Esc>` — Clear search highlights
 
+### Git Workflow (Fugitive)
+
+- `<leader>gs` — Open git status panel
+- `=` — Expand inline diff for file under cursor
+- `dv` — Open side-by-side diff view
+- `s` — Stage file
+- `u` — Unstage file
+- `cc` — Commit (opens message editor, `:wq` to confirm)
+- `<leader>gp` — Push
+- `:Gvdiff` — Side-by-side diff of current file vs last commit
+
 ### Requirements
 
 - Neovim >= 0.11
